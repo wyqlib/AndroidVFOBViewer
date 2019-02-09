@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_Top"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#dfecde">
+
+        <Button
+            android:id="@+id/button_Back"
+            android:layout_width="60px"
+            android:layout_height="80px"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5px"
+            android:layout_centerVertical="true"
+            android:background="#c8edd4"
+            android:onClick="buttonBack"
+            android:text="<<—" />
+
+
+        <EditText
+            android:id="@+id/editText_Path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/button_Go"
+            android:layout_toRightOf="@+id/button_Back"
+            android:ems="10"
+            android:inputType="textUri"
+            android:text="Root:\\" />
+
+        <Button
+            android:id="@+id/button_Go"
+            android:layout_width="120px"
+            android:layout_height="100px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5px"
+            android:onClick="buttonGo"
+            android:padding="0px"
+            android:layout_centerVertical="true"
+            android:text="GO" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayout_Bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout_Top"
+        android:background="#c9e4df">
+
+        <LinearLayout
+            android:id="@+id/linearLayout_Info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/relativeLayout_Bottom"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayout_Top"
+            android:background="#f2e1f2"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_Bottom"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#dfdef4">
+
+        <Button
+            android:id="@+id/button_Open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="buttonOpen"
+            android:text="Open" />
+
+        <Button
+            android:id="@+id/button_Root"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:onClick="buttonRoot"
+            android:text="Root"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/button_Open" />
+    </RelativeLayout>
+
+</RelativeLayout>
