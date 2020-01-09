@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.MainActivity">
+    tools:context="com.wyqlib.android.app.androidvfobviewer.MainActivity">
 
     <RelativeLayout
         android:id="@+id/relativeLayout_Top"
@@ -23,7 +23,7 @@
             android:layout_centerVertical="true"
             android:background="#c8edd4"
             android:onClick="buttonBack"
-            android:text="<<—" />
+            android:text="《-" />
 
 
         <EditText
